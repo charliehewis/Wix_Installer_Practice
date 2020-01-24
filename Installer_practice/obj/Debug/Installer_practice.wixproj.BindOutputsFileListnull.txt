@@ -1,0 +1,3 @@
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\cab1.cab
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\Installer_practice.msi
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\Installer_practice.wixpdb

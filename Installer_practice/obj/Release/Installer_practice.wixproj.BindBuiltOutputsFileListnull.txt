@@ -1,0 +1,2 @@
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Release\Installer_practice.msi
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Release\Installer_practice.wixpdb

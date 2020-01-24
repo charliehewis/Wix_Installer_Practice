@@ -1,0 +1,6 @@
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Release\Installer_practice.msi
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Release\Installer_practice.wixpdb
+obj\Release\Product.wixobj
+obj\Release\Installer_practice.wixproj.BindContentsFileListnull.txt
+obj\Release\Installer_practice.wixproj.BindOutputsFileListnull.txt
+obj\Release\Installer_practice.wixproj.BindBuiltOutputsFileListnull.txt

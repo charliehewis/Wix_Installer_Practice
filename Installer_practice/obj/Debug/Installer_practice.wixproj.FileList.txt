@@ -1,0 +1,7 @@
+obj\Debug\Product.wixobj
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\cab1.cab
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\Installer_practice.msi
+C:\Users\charlie.hewis\source\repos\Installer_practice\Installer_practice\bin\Debug\Installer_practice.wixpdb
+obj\Debug\Installer_practice.wixproj.BindContentsFileListnull.txt
+obj\Debug\Installer_practice.wixproj.BindOutputsFileListnull.txt
+obj\Debug\Installer_practice.wixproj.BindBuiltOutputsFileListnull.txt

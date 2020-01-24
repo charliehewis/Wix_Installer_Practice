@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*"
+           Name="Software for Newbies"
+           Language="1033" 
+           Version="1.0.0.0" 
+           Manufacturer="Satsuma Consuma"
+           UpgradeCode="e4d34104-1cfe-453a-90ce-79fabde0b6e8">
+
+    <Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine" 
+             Manufacturer="Satsuma Consuma"
+             Description="Installs Practice Software"    
+             Keywords="Practice,Installer,MSI"
+             Comments="(c) 2020 Satsuma Consuma"/>
+
+    <MediaTemplate EmbedCab="yes" />
+
+    <!--Directory structure-->
+
+    <Directory Id="TARGETDIR"
+               Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="MyProgramDir"
+                   Name="Install Practice">
+        </Directory>
+        <Directory Id="ProgramMenuFolder">
+          <Directory Id="MyShortcutsDir"
+                     Name="Software for Newbies" />
+        </Directory>
+      </Directory>
+    </Directory>
+
+    <!--Components-->
+
+    <DirectoryRef Id="MyProgramDir">
+      <Component Id="CMP_InstallMeTXT"
+                 Guid="91D624EB-64C3-49F1-9161-9346816AB3A2">
+        <File Id="FILE_MyProgramDir_InstallMeTXT"
+              Source="InstallMe.txt"
+              KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!--Start Menu Shortcuts-->
+
+    <Icon Id="icon.ico"
+          SourceFile="Bob_Newbie.ico"/>
+    <DirectoryRef Id="MyShortcutsDir">
+      <Component Id="CMP_DocumentationShortcut"
+                 Guid="{1A97F79D-912E-426B-BB63-1DB15831038B}">
+
+        <Shortcut Id="DocumentationStartMenuShortcut"
+                  Name="Software for Newbies Documentation"
+                  Description="Read Software for Newbies Documentation"
+                  Target="[MyProgramDir]InstallMe.txt"
+                  Icon="icon.ico" />
+
+        <Shortcut Id="UninstallShortcut"
+                  Name="Uninstall Software for Newbies"
+                  Description="Uninstalls Software for Newbies and all of its components"
+                  Target="[System64Folder]msiexec.exe"
+                  Arguments="/x [ProductCode]"
+                  Icon="icon.ico" />
+
+        <RemoveFolder Id="RemoveMyShortcutsDir"
+                      On="uninstall" />
+
+        <RegistryValue Root="HKCU"
+                       Key="Software\Microsoft\SoftwareForNewbies"
+                       Name="installed"
+                       Type="integer"
+                       Value="1"
+                       KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!--Features-->
+
+    <Feature Id="ProductFeature"
+             Title="Main Product"
+             Level="1">
+      <ComponentRef Id="CMP_InstallMeTXT" />
+      <ComponentRef Id="CMP_DocumentationShortcut" />
+    </Feature>
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <UIRef Id="WixUI_Minimal" />
+  </Product>
+</Wix>
